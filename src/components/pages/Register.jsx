@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { register } from '../../apiCalls/user.calls';
+import { UserContext } from '../../context/UserContext';
 
 export const Register = () => {
   const [name, setName] = useState('');
@@ -8,10 +11,30 @@ export const Register = () => {
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
 
+  const navigate = useNavigate();
+  const { user, setUser } = useContext(UserContext);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (password !== passwordConfirm) {
+      alert('Password does not match!');
+      return;
+    }
+    const data = { name, email, password };
+    const response = await register(data);
+    if (response.status === 201) {
+      alert('User successfully registered.');
+      setUser(response.data.user);
+      navigate('/');
+    } else {
+      alert(response.response.data.message);
+    }
+  };
+
   return (
     <div className="w-1/4 m-auto text-center">
       <h1 className="text-3x1 my-3 font-bold">Register</h1>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <div className="mb-3">
           <input
             type="text"
