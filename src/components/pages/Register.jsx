@@ -20,7 +20,7 @@ export const Register = () => {
       alert('Password does not match!');
       return;
     }
-    const data = { name, email, password };
+    const data = { name, email, age, password };
     const response = await register(data);
     if (response.status === 201) {
       alert('User successfully registered.');
@@ -30,7 +30,7 @@ export const Register = () => {
       alert(response.response.data.message);
     }
   };
-
+  //validation messages not fetched from BE! throws Undefined. try to fix it
   return (
     <div className="w-1/4 m-auto text-center">
       <h1 className="text-3x1 my-3 font-bold">Register</h1>
