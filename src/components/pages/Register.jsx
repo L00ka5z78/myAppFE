@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { register } from '../../apiCalls/user.calls';
 import { UserContext } from '../../context/UserContext';

@@ -11,6 +11,9 @@ import { getUser } from './apiCalls/user.calls';
 import { LoggedInHome } from './components/pages/LoggedInHome';
 import { NotProtectedRoutes } from './components/NotProtectedRoutes';
 import { ProtectedRoutes } from './components/ProtectedRoutes';
+import { AddTask } from './components/pages/AddTask';
+import { UpdateProfile } from './components/pages/UpdateProfile';
+import { UpdatePassword } from './components/pages/UpdatePassword';
 
 export const App = () => {
   const { user, setUser } = useContext(UserContext);
@@ -50,6 +53,30 @@ export const App = () => {
           element={
             <ProtectedRoutes loggedIn={user._id ? true : false}>
               <Profile />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/todo/create"
+          element={
+            <ProtectedRoutes loggedIn={user._id ? true : false}>
+              <AddTask />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/user/update"
+          element={
+            <ProtectedRoutes loggedIn={user._id ? true : false}>
+              <UpdateProfile />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/user/updatepassword"
+          element={
+            <ProtectedRoutes loggedIn={user._id ? true : false}>
+              <UpdatePassword />
             </ProtectedRoutes>
           }
         />

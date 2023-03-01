@@ -27,10 +27,16 @@ export const Profile = () => {
         <h2 className="text-2xl">Age: {user.age}</h2>
       </div>
       <div className="mt-3">
-        <button className="my-2 bg-green-600 text-white w-full py-2 rounded">
+        <button
+          onClick={() => navigate('/user/update')}
+          className="my-2 bg-green-600 text-white w-full py-2 rounded"
+        >
           Update profile
         </button>
-        <button className="my-2 bg-green-600 text-white w-full py-2 rounded">
+        <button
+          onClick={() => navigate('/user/updatepassword')}
+          className="my-2 bg-green-600 text-white w-full py-2 rounded"
+        >
           Update password
         </button>
         <button
