@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
 import { useNavigate } from 'react-router-dom';
-import { logout } from '../../apiCalls/user.calls';
+import { deleteUser, logout } from '../../apiCalls/user.calls';
 
 export const Profile = () => {
   const { user, setUser } = useContext(UserContext);
@@ -15,6 +15,19 @@ export const Profile = () => {
       navigate('/user/login');
     } else {
       alert(response.response.data.message);
+    }
+  };
+
+  const handleDelete = async (e) => {
+    if (window.confirm('Are you sure you want to delete your account?')) {
+      const response = await deleteUser();
+      if (response.status === 200) {
+        alert('User deleted successfully.');
+        setUser({});
+        navigate('/user/login');
+      } else {
+        alert(response.response.data.message);
+      }
     }
   };
 
@@ -45,7 +58,10 @@ export const Profile = () => {
         >
           Logout
         </button>
-        <button className="my-2 bg-red-600 text-white w-full py-2 rounded">
+        <button
+          onClick={handleDelete}
+          className="my-2 bg-red-600 text-white w-full py-2 rounded"
+        >
           Delete Account
         </button>
       </div>
