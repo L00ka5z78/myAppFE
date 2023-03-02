@@ -15,6 +15,7 @@ import { AddTask } from './components/pages/AddTask';
 import { UpdateProfile } from './components/pages/UpdateProfile';
 import { UpdatePassword } from './components/pages/UpdatePassword';
 import { ViewTask } from './components/pages/ViewTask';
+import { UpdateTask } from './components/pages/UpdateTask';
 
 export const App = () => {
   const { user, setUser } = useContext(UserContext);
@@ -81,12 +82,19 @@ export const App = () => {
             </ProtectedRoutes>
           }
         />
-
         <Route
           path="/todo/view/:id"
           element={
             <ProtectedRoutes loggedIn={user._id ? true : false}>
               <ViewTask />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/todo/update/:id"
+          element={
+            <ProtectedRoutes loggedIn={user._id ? true : false}>
+              <UpdateTask />
             </ProtectedRoutes>
           }
         />

@@ -34,7 +34,12 @@ export const TaskElement = ({ prevTask }) => {
         </button>
       </td>
       <td className="border px-4 py-2">
-        <button className="bg-green-600 text-white px-2 rounded">Update</button>
+        <button
+          onClick={() => navigate(`/todo/update/${prevTask._id}`)}
+          className="bg-green-600 text-white px-2 rounded"
+        >
+          Update
+        </button>
       </td>
       <td className="border px-4 py-2">
         <button
