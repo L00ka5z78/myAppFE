@@ -52,3 +52,4 @@ export const TaskElement = ({ prevTask }) => {
     </tr>
   );
 };
+/**delete works, but it doesnt refresh page, and it throws error in console unauthorized, check and try to figure it out and fix */

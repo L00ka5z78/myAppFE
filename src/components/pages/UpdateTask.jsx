@@ -4,10 +4,9 @@ import { updateTask } from '../../apiCalls/task.calls';
 import { TaskContext } from '../../context/TaskContext';
 
 export const UpdateTask = () => {
-  const { todo, setTodo } = useContext(TaskContext);
+  const { task, setTask } = useContext(TaskContext);
   const { id } = useParams();
-  const myTodo = todo.find((todo) => todo._id === id);
-  console.log(todo);
+  const myTodo = task.find((todo) => todo._id === id);
   const [title, setTitle] = useState(myTodo.title);
   const [description, setDescription] = useState(myTodo.description);
   const [completed, setCompleted] = useState(myTodo.completed);
@@ -19,7 +18,8 @@ export const UpdateTask = () => {
     const data = { title, description, completed };
     const response = await updateTask(id, data);
     if (response.status === 200) {
-      alert(response.response.data.message);
+      alert('Successfully updated.');
+      //   alert(response.response.data.message);
       navigate('/');
     } else {
       alert(response.response.data.message);
@@ -67,3 +67,7 @@ export const UpdateTask = () => {
     </div>
   );
 };
+
+/**textarea goes too wide when description is longer, and ruins styling.
+ * if description is short it is all right UpdateTask
+ */
