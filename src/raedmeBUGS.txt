@@ -1,0 +1,11 @@
+/**delete works, removes an item  but it doesnt refresh page, and it throws error in console unauthorized. fter refreshing page it doesnt exist check and try to figure it out and fix */  
+*************** TaskElement **********************
+
+
+/**textarea goes too wide when description is longer, and ruins styling.
+ * if description is short it is all right 
+ *****************     UpdateTask   ****************
+ */
+
+ backend: validaton messages not passing to frontend. probably i made something  wrong in BE validation. CHECK it
+or in FRontend form on submit, but its doubtfull
