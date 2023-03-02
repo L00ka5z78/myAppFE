@@ -21,12 +21,14 @@ export const TaskList = () => {
   return (
     <table className="table-auto w-full">
       <thead>
-        <th className="border px-4 py-2">Title</th>
-        <th className="border px-4 py-2">Description</th>
-        <th className="border px-4 py-2">Completed</th>
-        <th className="border px-4 py-2">View</th>
-        <th className="border px-4 py-2">Update</th>
-        <th className="border px-4 py-2">Delete</th>
+        <tr>
+          <th className="border px-4 py-2">Title</th>
+          <th className="border px-4 py-2">Description</th>
+          <th className="border px-4 py-2">Completed</th>
+          <th className="border px-4 py-2">View</th>
+          <th className="border px-4 py-2">Update</th>
+          <th className="border px-4 py-2">Delete</th>
+        </tr>
       </thead>
       <tbody>
         {task.length > 0 &&

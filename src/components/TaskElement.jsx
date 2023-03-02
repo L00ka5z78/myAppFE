@@ -11,7 +11,7 @@ export const TaskElement = ({ prevTask }) => {
       if (response.status === 200) {
         alert(response.data.message);
         // window.location.reload();    //doesnt refresh page :/
-        navigate('/user/profile');
+        navigate('/user/profile'); //doesnt redirect
       } else {
         alert(response.response.data.message);
       }
@@ -26,7 +26,12 @@ export const TaskElement = ({ prevTask }) => {
         {prevTask.completed ? 'Completed' : 'Not yet...'}
       </td>
       <td className="border px-4 py-2">
-        <button className="bg-blue-700 text-white px-2 rounded">View</button>
+        <button
+          onClick={() => navigate(`/todo/view/${prevTask._id}`)}
+          className="bg-blue-700 text-white px-2 rounded"
+        >
+          View
+        </button>
       </td>
       <td className="border px-4 py-2">
         <button className="bg-green-600 text-white px-2 rounded">Update</button>
