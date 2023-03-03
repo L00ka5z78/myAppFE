@@ -16,6 +16,7 @@ import { UpdateProfile } from './components/pages/UpdateProfile';
 import { UpdatePassword } from './components/pages/UpdatePassword';
 import { ViewTask } from './components/pages/ViewTask';
 import { UpdateTask } from './components/pages/UpdateTask';
+import { Footer } from './components/Footer';
 
 export const App = () => {
   const { user, setUser } = useContext(UserContext);
@@ -99,6 +100,7 @@ export const App = () => {
           }
         />
       </Routes>
+      <Footer />
     </div>
   );
 };
