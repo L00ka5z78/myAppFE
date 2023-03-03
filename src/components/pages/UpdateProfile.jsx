@@ -5,7 +5,6 @@ import { updateUser } from '../../apiCalls/user.calls';
 
 export const UpdateProfile = () => {
   const { user, setUser } = useContext(UserContext);
-
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
   const [age, setAge] = useState(user.age);
@@ -21,7 +20,7 @@ export const UpdateProfile = () => {
       setUser(response.data.user);
       navigate('/user/profile');
     } else {
-      alert(response.response.data.message);
+      alert(response.response.data.msg);
     }
   };
 

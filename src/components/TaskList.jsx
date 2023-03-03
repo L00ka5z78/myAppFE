@@ -12,7 +12,7 @@ export const TaskList = () => {
       if (response.status === 200) {
         setTask(response.data.todos);
       } else {
-        alert(response.response.data.message);
+        alert(response.response.data.msg);
       }
     };
     fetchData();

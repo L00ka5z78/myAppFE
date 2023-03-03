@@ -26,10 +26,10 @@ export const Register = () => {
       setUser(response.data.user);
       navigate('/');
     } else {
-      alert(response.response.data.message);
+      alert(response.response.data.msg);
     }
   };
-  //validation messages not fetched from BE! throws Undefined. try to fix it
+
   return (
     <div className="w-1/4 m-auto text-center">
       <h1 className="text-3x1 my-3 font-bold">Register</h1>

@@ -10,10 +10,10 @@ export const TaskElement = ({ prevTask }) => {
       const response = await deleteTask(prevTask._id);
       if (response.status === 200) {
         alert(response.data.message);
-        // window.location.reload();    //doesnt refresh page :/
-        navigate('/user/profile'); //doesnt redirect
+        window.location.reload();
+        // navigate('/user/profile'); // i must decide what is better
       } else {
-        alert(response.response.data.message);
+        alert(response.response.data.msg);
       }
     }
   };

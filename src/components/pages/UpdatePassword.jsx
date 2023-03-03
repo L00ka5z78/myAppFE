@@ -24,7 +24,7 @@ export const UpdatePassword = () => {
       alert('Password successfully updated.');
       navigate('/user/profile');
     } else {
-      alert(response.response.data.message);
+      alert(response.response.data.msg);
     }
   };
 

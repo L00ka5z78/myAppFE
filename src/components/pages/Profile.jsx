@@ -14,7 +14,7 @@ export const Profile = () => {
       setUser({});
       navigate('/user/login');
     } else {
-      alert(response.response.data.message);
+      alert(response.response.data.msg);
     }
   };
 
@@ -26,7 +26,7 @@ export const Profile = () => {
         setUser({});
         navigate('/user/login');
       } else {
-        alert(response.response.data.message);
+        alert(response.response.data.msg);
       }
     }
   };

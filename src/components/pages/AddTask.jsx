@@ -16,7 +16,7 @@ export const AddTask = () => {
       alert('Task created');
       navigate('/');
     } else {
-      alert(response.response.data.message);
+      alert(response.response.data.msg);
     }
   };
 

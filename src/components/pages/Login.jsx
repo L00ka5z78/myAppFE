@@ -21,7 +21,7 @@ export const Login = () => {
       setUser(response.data.user);
       navigate('/');
     } else {
-      alert(response.response.data.message);
+      alert(response.response.data.msg);
     }
   };
   //validation messages not fetched from BE! throws Undefined. try to fix it

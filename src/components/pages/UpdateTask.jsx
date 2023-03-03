@@ -19,10 +19,10 @@ export const UpdateTask = () => {
     const response = await updateTask(id, data);
     if (response.status === 200) {
       alert('Successfully updated.');
-      //   alert(response.response.data.message);
+      //   alert(response.response.data.msg);
       navigate('/');
     } else {
-      alert(response.response.data.message);
+      alert(response.response.data.msg);
     }
   };
 

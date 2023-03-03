@@ -12,7 +12,7 @@ export const ViewTask = () => {
       if (response.status === 200) {
         setTodo(response.data.todo);
       } else {
-        alert(response.response.data.message);
+        alert(response.response.data.msg);
       }
     };
     fetchData();
