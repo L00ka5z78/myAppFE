@@ -24,7 +24,8 @@ export const Profile = () => {
       if (response.status === 200) {
         alert('User deleted successfully.');
         setUser({});
-        navigate('/user/login');
+        // navigate('/user/login');
+        navigate('/');
       } else {
         alert(response.response.data.msg);
       }
