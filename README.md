@@ -6,8 +6,12 @@ Also there is a registration form where you have to give some required data. Log
 Tech stack used to build this project:
 JavaScript, ReactJs, TailwindCSS, MongoDB Compass, Express, NodeJS.
 
-To run this app you should clone this repository: git clone https://github.com/L00ka5z78/myAppFE
-Clone the backend of this project: git clone https://github.com/L00ka5z78/myAppBE
+To run this app you should clone this repository:
+
+git clone https://github.com/L00ka5z78/myAppFE
+Clone the backend of this project:
+
+git clone https://github.com/L00ka5z78/myAppBE
 
 Install all dependencies. To do that, run npm install in PROJECTS DIRECTORY.
 
@@ -44,9 +48,9 @@ Project databes structure if needed:
 
 
 Dependenices: 
-axios - Promise based HTTP client for the browser and node.js
-react - front-end JavaScript library for building user interfaces based on components.
-react-router-dom -  routing for React web applications
-tailwindcss -  CSS framework.
+1. axios - Promise based HTTP client for the browser and node.js
+2. react - front-end JavaScript library for building user interfaces based on components.
+3. react-router-dom -  routing for React web applications
+4. tailwindcss -  CSS framework.
 
 
