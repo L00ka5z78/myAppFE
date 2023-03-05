@@ -1,70 +1,52 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hey there! This is Frontend to an  immortal task list application. It is a project I wrote to test my skills in actually connecting backend and fronted.
+Aplication has CRUD operations, where one can add, remove, update, list tasks and single task. 
+Also there is a registration form where you have to give some required data. Login form is also built.
 
-## Available Scripts
+Tech stack used to build this project:
+JavaScript, ReactJs, TailwindCSS, MongoDB Compass, Express, NodeJS.
 
-In the project directory, you can run:
+To run this app you should clone this repository: git clone https://github.com/L00ka5z78/myAppFE
+Clone the backend of this project: git clone https://github.com/L00ka5z78/myAppBE
 
-### `npm start`
+Install all dependencies. To do that, run npm install in PROJECTS DIRECTORY.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install mongoDB Compass on your device and remember to have mongo running in terminal.
+Sometimes there are problems to run mongo, therefor i will give few hints. 
+After installing on your device try to run it from terminal in your project. If it will not run,
+create a script in package.json file like this: 
+"start-mongo": "cd /d **your path to /MongoDb/bin/ && mongod.exe **",
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+and run the database in the background in your backend.
+then run the project in the backend: npm run start.
+If everything went right,
+you will see messages that server is running and database is connected.
 
-### `npm test`
+Some screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![profil](https://user-images.githubusercontent.com/110019733/222970835-10476025-c3d8-437d-8e22-ce2203441c10.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![viewtask](https://user-images.githubusercontent.com/110019733/222970830-6ed0b5e7-b8de-4987-882c-faf4f2621525.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Project structure:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![folderstructure](https://user-images.githubusercontent.com/110019733/222970176-f3baf453-e984-4fd0-8b57-9aff0f2f4391.png)
 
-## Learn More
+Project databes structure if needed:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![dbstructure](https://user-images.githubusercontent.com/110019733/222970237-1126e989-f950-4561-a6db-d21b88ba703f.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Dependenices: 
+axios - Promise based HTTP client for the browser and node.js
+react - front-end JavaScript library for building user interfaces based on components.
+react-router-dom -  routing for React web applications
+tailwindcss -  CSS framework.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
