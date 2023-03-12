@@ -1,10 +1,12 @@
-import React, { useContext, useEffect } from 'react';
+import * as React from 'react';
 import { getTasks } from '../apiCalls/task.calls';
 import { TaskContext } from '../context/TaskContext';
 import { TaskElement } from './TaskElement';
+import {useContext, useEffect} from "react";
 
 export const TaskList = () => {
   const { task, setTask } = useContext(TaskContext);
+  /**  Property 'setTask' does not exist on type '{ task: {}; setUser: () => void; }'.*/
 
   useEffect(() => {
     const fetchData = async () => {

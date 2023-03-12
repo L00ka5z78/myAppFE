@@ -1,11 +1,12 @@
 import axios from "axios";
+import {ITodo} from "../types/todoType";
 
 
-export const createTask = async (todo) => {
+export const createTask = async (todo: ITodo) => {
     try {
         const res = await axios.post("/api/todos/create", todo);
         return res;
-    } catch (err) {
+    } catch (err: any) {
         return err;
     }
 }
@@ -14,37 +15,37 @@ export const getTasks = async () => {
     try {
         const res = await axios.get("/api/todos");
         return res;
-    } catch (err) {
+    } catch (err: any) {
         return err;
     }
 }
 
 
 
-export const getTask = async (id) => {
+export const getTask = async (id: string) => {
     try {
         const res = await axios.get(`/api/todos/${id}`);
         return res;
-    } catch (err) {
+    } catch (err: any) {
         return err;
     }
 }
 
-export const updateTask = async (id, todo) => {
+export const updateTask = async (id: string, todo: ITodo) => {
     try {
         const res = await axios.put(`/api/todos/update/${id}`, todo);
         return res;
-    } catch (err) {
+    } catch (err: any) {
         return err;
     }
 }
 
 
-export const deleteTask = async (id) => {
+export const deleteTask = async (id: string) => {
     try {
         const res = await axios.delete(`/api/todos/delete/${id}`);
         return res;
-    } catch (err) {
+    } catch (err: any) {
         return err;
     }
 }

@@ -1,7 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
+import {IUser} from "../types/userType";
 
-export const Navbar = ({ user }) => {
+interface Props {
+    user: IUser
+}
+
+export const Navbar = ({ user }: Props) => {
   return (
     <nav className="bg-black py-3 text-white flex items-center justify-between  ">
       <h1 className="ml-1 font-bold text-2xl">

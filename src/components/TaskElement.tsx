@@ -1,11 +1,16 @@
-import React from 'react';
+import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { deleteTask } from '../apiCalls/task.calls';
+import {ITodo} from "../types/todoType";
 
-export const TaskElement = ({ prevTask }) => {
+
+interface Props {
+    prevTask: ITodo //not sure is it ok
+}
+export const TaskElement = ({ prevTask }: Props) => {
   const navigate = useNavigate();
 
-  const handleDelete = async (e) => {
+  const handleDelete = async (e:  React.FormEvent) => {
     if (window.confirm('Are you sure you want to delete this task?')) {
       const response = await deleteTask(prevTask._id);
       if (response.status === 200) {
@@ -52,4 +57,3 @@ export const TaskElement = ({ prevTask }) => {
     </tr>
   );
 };
-/**delete works, but it doesnt refresh page, and it throws error in console unauthorized, check and try to figure it out and fix */
