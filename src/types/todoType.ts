@@ -39,6 +39,7 @@ export interface ITodo {
   user: any;
   createdAt?: string;
   updatedAt?: string;
+  todo: any; //dopisalem przed chwila
 }
 
 export interface TodoProps {
