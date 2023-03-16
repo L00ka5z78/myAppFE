@@ -1,18 +1,50 @@
-import {useState, createContext} from 'react';
-import * as React from "react";
+// import {useState, createContext} from 'react';
+// import * as React from "react";
 
-export const UserContext = createContext({
-    user: {}, setUser: () => {
-    }
+// export const UserContext = createContext({
+//     user: {}, setUser: () => {
+//     }
+// });
+
+// export const UserContextProvider = ({children}) => {
+//     const [user, setUser] = useState({});
+//     return (
+//         <UserContext.Provider value={{user, setUser}}>
+//             {children}
+//         </UserContext.Provider>
+//     );
+// };
+
+import * as React from 'react';
+import {
+  useState,
+  createContext,
+  ReactNode,
+  Dispatch,
+  SetStateAction,
+} from 'react';
+import { IUser } from '../types/userType';
+
+interface IUserProps {
+  user: IUser;
+  children: ReactNode;
+}
+
+interface IUserContext {
+  user: IUser;
+  setUser: Dispatch<SetStateAction<any>>;
+}
+export const UserContext = createContext<IUserContext>({
+  user: {} as IUser,
+  setUser: () => {},
 });
 
-export const UserContextProvider = ({children}) => {
-    const [user, setUser] = useState({});
-    return (
-        /**  type '{ task: {}; setTask: React.Dispatch<React.SetStateAction<{}>>; }' is not assignable to type '{ task: {}; setUser: () => void; }'. Object literal may only specify known properties, and 'setTask' does not exist in type '{ task: {}; setUser: () => void; }'.
-         setTask nie umiem tego otypować....*/
-        <UserContext.Provider value={{user, setUser}}>
-            {children}
-        </UserContext.Provider>
-    );
+export const UserContextProvider = ({ user, children }: IUserProps) => {
+  const [currentUser, setCurrentUser] = useState<IUser>(user);
+  const setUser = (user: IUser) => setCurrentUser(user);
+  return (
+    <UserContext.Provider value={{ user: currentUser, setUser }}>
+      {children}
+    </UserContext.Provider>
+  );
 };
