@@ -21,7 +21,6 @@ import './App.css';
 export const App = () => {
   const { user, setUser } = useContext(UserContext);
 
-  //avoid to reset logged in user data after page is refreshed
   useEffect(() => {
     const fetchData = async () => {
       const res: any = await getUser();
@@ -35,12 +34,10 @@ export const App = () => {
       <Navbar user={user} />
       <Routes>
         <Route path="/" element={user ? <LoggedInHome /> : <Home />} />
-        {/*<Route path="/" element={user._id ? <LoggedInHome /> : <Home />} />*/}
         <Route
           path="/user/register"
           element={
             <NotProtectedRoutes loggedIn={!!user}>
-              {/*<NotProtectedRoutes loggedIn={!!user._id}>*/}
               <Register />
             </NotProtectedRoutes>
           }
@@ -49,7 +46,6 @@ export const App = () => {
           path="/user/login"
           element={
             <NotProtectedRoutes loggedIn={!!user}>
-              {/*<NotProtectedRoutes loggedIn={!!user._id}>*/}
               <Login />
             </NotProtectedRoutes>
           }
@@ -58,7 +54,6 @@ export const App = () => {
           path="/user/profile"
           element={
             <ProtectedRoutes loggedIn={!!user}>
-              {/*<ProtectedRoutes loggedIn={!!user._id}>*/}
               <Profile />
             </ProtectedRoutes>
           }
@@ -67,7 +62,6 @@ export const App = () => {
           path="/todo/create"
           element={
             <ProtectedRoutes loggedIn={user ? true : false}>
-              {/*<ProtectedRoutes loggedIn={user._id ? true : false}>*/}
               <AddTask />
             </ProtectedRoutes>
           }
@@ -76,7 +70,6 @@ export const App = () => {
           path="/user/update"
           element={
             <ProtectedRoutes loggedIn={user ? true : false}>
-              {/*<ProtectedRoutes loggedIn={user._id ? true : false}>*/}
               <UpdateProfile />
             </ProtectedRoutes>
           }
@@ -85,7 +78,6 @@ export const App = () => {
           path="/user/updatepassword"
           element={
             <ProtectedRoutes loggedIn={user ? true : false}>
-              {/*<ProtectedRoutes loggedIn={user._id ? true : false}>*/}
               <UpdatePassword />
             </ProtectedRoutes>
           }
@@ -94,8 +86,7 @@ export const App = () => {
           path="/todo/view/:id"
           element={
             <ProtectedRoutes loggedIn={user ? true : false}>
-              {/*<ProtectedRoutes loggedIn={user._id ? true : false}>*/}
-              <ViewTask />
+              <ViewTask  />
             </ProtectedRoutes>
           }
         />
@@ -103,7 +94,6 @@ export const App = () => {
           path="/todo/update/:id"
           element={
             <ProtectedRoutes loggedIn={user ? true : false}>
-              {/*<ProtectedRoutes loggedIn={user._id ? true : false}>*/}
               <UpdateTask />
             </ProtectedRoutes>
           }
