@@ -16,11 +16,10 @@ and watching some videos how it is made. So final result is ok, but it was a rea
 
 The other thing is, that Im learning Typescript now, and there is a typescript version on branch
 newDevelop. Right now (20.03.23) the user side operations works well, authentication, validation, but the task 
-operations needs some upgrades. Check it out:
+operations needs some upgrades. Check it out if you want see typescript code: https://github.com/L00ka5z78/myAppFE/tree/newDevelop
+But I recommend to begin with main branch, and then if you want, you can come back and see the TS branch
 
-https://github.com/L00ka5z78/myAppFE/tree/newDevelop
-
-To run this app you should clone this repository:
+### To run this app you should clone this repository:
 
 git clone https://github.com/L00ka5z78/myAppFE
 Clone the backend of this project:
