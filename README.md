@@ -75,3 +75,9 @@ Project databes structure if needed:
 #### Wow... If you are here, and read all the way down, so maybe you will check my github account with my more or less successfull projects:
 https://github.com/L00ka5z78
 
+### LinkedIn
+https://www.linkedin.com/in/%C5%82ukasz-bolach/
+
+### Discord
+https://discord.com/users/geriatrichardman#7876
+
