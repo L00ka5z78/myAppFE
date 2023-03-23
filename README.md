@@ -17,7 +17,8 @@ and watching some videos how it is made. So final result is ok, but it was a rea
 The other thing is, that Im learning Typescript now, and there is a typescript version on branch
 newDevelop. Right now (20.03.23) the user side operations works well, authentication, validation, but the task 
 operations needs some upgrades. Check it out:
-https://github.com/L00ka5z78/myAppFE/blob/newDevelop/README.md
+
+https://github.com/L00ka5z78/myAppFE/tree/newDevelop
 
 To run this app you should clone this repository:
 
